@@ -124,7 +124,7 @@ output_file = __file__
 output_file = output_file.split("\\")
 output_file.pop()
 output_file = "\\".join(output_file)
-output_file += "\\{}_{}.csv".format(to_search,today)
+output_file += "\\output\\{}_{}.csv".format(to_search,today)
 
 data = data.sort_values(by = ["openings_info", "name"])
 data.to_csv(output_file)
