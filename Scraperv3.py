@@ -1,7 +1,7 @@
 import tweepy
 import time
 import math
-import easygui
+#import easygui
 import pandas as pd
 import os
 import re
@@ -56,7 +56,7 @@ auth.set_access_token(access_token, access_secret)
 
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-to_search = easygui.enterbox("Which user do you want to get open friends from? - @")
+to_search = input("Which user do you want to get open friends from?\n@")
 
 column_names = ["screen_name", "link", "name", "description", "openings_info"]
 data = pd.DataFrame(columns = column_names)
